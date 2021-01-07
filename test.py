@@ -65,7 +65,7 @@ for folder in os.listdir("./musics/wav_genres/"):
     results[i]=folder
     i+=1
 
-(rate,sig)=wav.read("./WAVSample/sample.wav")
+(rate,sig)=wav.read("./WAVSample/sample2.wav")
 mfcc_feat=mfcc(sig,rate,winlen=0.020,appendEnergy=False)
 covariance = np.cov(np.matrix.transpose(mfcc_feat))
 mean_matrix = mfcc_feat.mean(0)
